@@ -1,0 +1,219 @@
+<html>
+    <head>
+        <title>Question Generator</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- bootstrap - 3.3.7 -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap-3.3.7/css/bootstrap.min.css') }}">
+
+
+        <!-- jQuery - 3.3.1 -->
+        <script src="{{ url_for('static', filename='jQuery/jquery-3.3.1.min.js') }}"></script>
+        
+
+        <!--Custom CSS-->
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/home.css') }}">
+
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+            crossorigin="anonymous">
+    </head>
+
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="custom-container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <img src="{{ url_for('static', filename='images/logoimg.png') }}" style="width: 81px;height: 73px;" class="pull-left">
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-right navbar-nav">
+                        <li><a class="menu" href="/"><span class="fas fa-home"></span> Home</a></li>
+                        <li><a class="menu" href="/TutorialList"><span class="fas fa-file-contract"></span> Learn</a></li>
+                        <li><a class="menu" href="/HowItWorks"><span class="fab fa-steam-symbol"></span> How it Works</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="parllel" id="one" style="position:relative;">
+            <div class="row" id="top">
+                <div class="col-lg-7 col-lg-offset-1 top">
+                    <h1>Intelligent Question Generator</h1>
+                    <p style="color:white;text-align: justify">
+                        Question-answering systems are referred to as intelligent systems that can be used to provide
+                        responses
+                        for the questions being asked by
+                        the user based on certain facts or rules stored in
+                        the knowledge base. So the accuracy of a question-answering system to provide a
+                        correct response depends on the rules or facts stored in the knowledge base.
+                    </p>
+                    <div class="col-lg-6">
+                        <input type="button" id="getstart" value="Get Started">
+                    </div>
+                </div>
+            </div>
+
+            <a href="#second" id="godown"><span class="fas fa-chevron-down"></span></a>
+        </div>
+
+        <div class="jumbotron" id="second">
+            <h1 class="h1"> Whats Inside</h1>
+        </div>
+
+        <div class="parllel" id="two">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 whatinside">
+                    <div><span class="fas fa-hand-pointer ablogo"></span></div>
+                    <div>
+                        <h3>Select Your Topics</h3>
+                        <p>you can select topics of your choice to learn from it.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 whatinside">
+                    <div><span class="fas fa-book-open ablogo"></span></div>
+                    <div>
+                        <h3>Learn from Topics</h3>
+                        <p>you can learn the content from the selected topics by you.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 whatinside">
+                    <div><span class="fas fa-question ablogo "></span></div>
+                    <div>
+                        <h3>Take Test</h3>
+                        <p>you can take a test from the selected topics generated in the application.</p>
+                    </div>
+                </div>
+                <div class="col-lg-offset-2 col-md-offset-2 col-lg-4 col-md-4 whatinside">
+                    <div><span class="fas fa-chart-line ablogo"></span></div>
+                    <div>
+                        <h3>Evaluate Yourself</h3>
+                        <p>the result will be generate from the quiz you are taken.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 whatinside">
+                    <div><span class="fas fa-book ablogo"></span></div>
+                    <div>
+                        <h3>Upload/Learn PDF</h3>
+                        <p>you can upload your own pdf and make a quiz and evaluate.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="jumbotron" id="exptopic">
+            <h1 class="h1"> Explorer Our Topics</h1>
+        </div>
+        
+        <div class="parllel" id="three">
+            <div class="container">
+                <div class="row" id="toppics">
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                        <div class="topone">
+                            <div class="flip-card">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front">
+                                        <img id="img" src="{{ url_for('static', filename='images/ai2.png') }}" alt="Avatar"
+                                            style="max-height:200px;min-height: 200px;width:100%;">
+                                    </div>
+
+                                    <div class="flip-card-back" style="width:100%;background-color: lightgray;color: black;">
+                                        <p style="margin:80px 0px;font-size: 18px;font-weight: 700;">
+                                            Artificial Intelligence
+                                            <br>
+                                            <a href="/TopicContent/Artificial Intelligence">Learn more</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                        <div class="topone">
+                            <div class="flip-card">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front">
+                                        <img id="img" src="{{ url_for('static', filename='images/deep.jpg') }}" alt="Avatar"
+                                            style="max-height:200px;min-height:200px;width:100%;">
+                                    </div>
+                        
+                                    <div class="flip-card-back" style="width:100%;background-color: lightgray;color: black;">
+                                        <p style="margin:80px 0px;font-size: 18px;font-weight: 700;">
+                                            Machine Learning
+                                            <br>
+                                            <a href="/TopicContent/Machine learning">Learn more</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                        <div class="topone">
+                            <div class="flip-card">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front">
+                                        <img id="img" src="{{ url_for('static', filename='images/machine.png') }}" alt="Avatar"
+                                            style="max-height:200px;min-height: 200px;width:100%;">
+                                    </div>
+                    
+                                    <div class="flip-card-back" style="width:100%;background-color: lightgray;color: black;">
+                                        <p style="margin:80px 0px;font-size: 18px;font-weight: 700;">
+                                            Deep Learning
+                                            <br>
+                                            <a href="/TopicContent/deep learning">Learn more</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 " style="text-align:center;">
+                        <input type="button" id="learn" class="btn btn-info" value="Learn More">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer" id="foot">
+            <div class="row">
+                <div class="col-lg-5 col-lg-offset-1 col-md-5 col-md-offset-1 col-sm-5 col-sm-offset-1">
+                    <div id="loc">
+                        <p> <span class="fas fa-thumbtack footicon"></span>Tcs Ignite,Chennai one</p>
+                    </div>
+                    <div id="con">
+                        <p><span class="fas fa-phone footicon" style="color:white;"></span> +91-XXXXXXXXXX</p>
+                    </div>
+                    <div id="email">
+                        <p> <span class="fas fa-at footicon"></span> balraj.doddi97@gmail.com</p>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-lg-offset-1 col-md-5 col-md-offset-1 col-sm-5 col-sm-offset-1">
+                    <h3>Navigate</h3>
+                    <p><a href="#">Top</a></p>
+                    <p><a href="#second">Whats Inside</a></p>
+                    <p><a href="#exptopic">Learn</a></p>
+                </div>
+
+            </div>
+        </div>
+
+        <script>
+            $("#getstart").click(function () {
+                window.location.href = "/TutorialList";
+            });
+            $("#learn").click(function () {
+                window.location.href = "/TutorialList";
+            });
+        </script>
+    </body>
+</html>

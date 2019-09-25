@@ -1,0 +1,33 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.js"></script>
+
+<div style="width:30%">
+	<canvas id="myChart" width="200" height="200"></canvas>
+</div>
+<script>
+var ctx = document.getElementById("myChart").getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'pie',
+    data: {
+        labels: ["RIGHT","WRONG"],
+        datasets: [{
+            label: '# of Votes',
+            data: [30, 70],
+            backgroundColor: [
+                'rgba(54, 162, 235, 0.9)',
+                'rgba(255, 99, 132, 0.9)'
+            ],
+            borderColor: [
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 99, 132, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+	options: {
+        title: {
+            display: true,
+            text: 'YOUR SCORE'
+        }
+    }
+});
+</script>

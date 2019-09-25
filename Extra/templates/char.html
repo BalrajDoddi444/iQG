@@ -1,0 +1,43 @@
+<!-- JQuery link -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<div style="width:10%">
+		<div id="click" style="border: 1px solid red">Click me</div>
+</div>
+
+
+<!--
+<div>
+	<br>
+	<h4>Login</h4>
+	<br>
+	<form action="" mthod="post">
+		<input>
+	</form>
+</div>
+-->
+
+
+
+<script>
+	$(document).ready(function(){
+		$("#click").click(function(){
+			$.ajax({
+				url:"/",
+				method:'POST',
+				data:{'name':'Balraj'}
+			});
+		
+//			$.post( "/", {
+//				javascript_data: "Balraj"
+//			});
+
+//			$.get( "/getmethod/<javascript_data>" );
+
+//			$.get("/getpythondata", function(data) {
+//				console.log($.parseJSON(data));
+//			});
+			console.log("ABCD");
+		});
+	});
+</script>
